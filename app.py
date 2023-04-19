@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/twilio", methods=['GET', 'POST'])
 def twilio():
     resp = VoiceResponse()
-    resp.say("Welcome, halarput. Please say Good Morning.")
+    resp.say("Welcome, Dear Brother. Please say Good Morning.")
     with resp.gather(numDigits=1, action="/process-response") as gather:
         gather.say("Press 1 for Good Morning.")
     return str(resp)
